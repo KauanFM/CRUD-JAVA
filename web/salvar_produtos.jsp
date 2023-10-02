@@ -16,37 +16,37 @@
     </head>
     <body>
         <%
-            
-         // Recebendo os parâmetros do cadastro de produtos //
-         int codigo;
-         String nome, marca;
-         double preco;
-       
-         codigo = Integer.parseInt(request.getParameter("codigo"));
-         nome = request.getParameter("nome");
-         marca = request.getParameter("marca");
-         preco = Double.parseDouble(request.getParameter("preco"));
-         
-         try {
-         //Fazer a conexão com o Banco de Dados //
-         Connection conecta;
-         PreparedStatement st;
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "jojokau8871");
-         
-         //inserir os dados na tabela produto do banco de dados //
-         st = conecta.prepareStatement("INSERT INTO produto VALUES(?,?,?,?)");
-         st.setInt(1, codigo);
-         st.setString(2, nome);
-         st.setString(3, marca);
-         st.setDouble(4, preco);
-         st.execute(); // Executa o comando sql INSERT
-         out.print("Produto cadastrado com sucesso");
-         } catch(Exception x) {
-            out.print("Erro: " + x.getMessage());
-         }
-         
-         
+
+            // Recebendo os parâmetros do cadastro de produtos //
+            int codigo;
+            String nome, marca;
+            double preco;
+
+            codigo = Integer.parseInt(request.getParameter("codigo"));
+            nome = request.getParameter("nome");
+            marca = request.getParameter("marca");
+            preco = Double.parseDouble(request.getParameter("preco"));
+
+            try { // Tratando Exceções 
+                //Fazer a conexão com o Banco de Dados //
+                Connection conecta;
+                PreparedStatement st;
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "jojokau8871");
+
+                //inserir os dados na tabela produto do banco de dados //
+                st = conecta.prepareStatement("INSERT INTO produto VALUES(?,?,?,?)");
+                st.setInt(1, codigo);
+                st.setString(2, nome);
+                st.setString(3, marca);
+                st.setDouble(4, preco);
+                st.execute(); // Executa o comando sql INSERT
+                out.print("Produto cadastrado com sucesso");
+            } catch (Exception x) {
+                out.print("Erro: " + x.getMessage());
+            }
+
+
         %>
     </body>
 </html>

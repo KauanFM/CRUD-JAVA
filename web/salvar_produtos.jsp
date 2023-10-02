@@ -27,6 +27,7 @@
          marca = request.getParameter("marca");
          preco = Double.parseDouble(request.getParameter("preco"));
          
+         try {
          //Fazer a conexão com o Banco de Dados //
          Connection conecta;
          PreparedStatement st;
@@ -41,7 +42,9 @@
          st.setDouble(4, preco);
          st.execute(); // Executa o comando sql INSERT
          out.print("Produto cadastrado com sucesso");
-         
+         } catch(Exception x) {
+            out.print("Erro: " + x.getMessage());
+         }
          
          
         %>

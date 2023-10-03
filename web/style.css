@@ -43,3 +43,8 @@ footer{
     background-color: #0C098E;
     color: white;
 }
+
+main iframe{
+    width: 100%;
+    height: 100%
+}

@@ -13,6 +13,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Listagem de Produtos</title>
+        <style>
+            * {
+                margin: 0 auto;
+            }
+
+            table {
+                width: 40%;
+                margin-top: 40px
+            }
+
+        </style>
     </head>
 
     <%

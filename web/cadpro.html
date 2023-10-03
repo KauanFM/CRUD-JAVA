@@ -4,30 +4,51 @@
         <title>Cadastro de podutos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            * {
+                margin: 0 auto
+            }
+
+            form {
+                width: 40%;
+                line-height: 2;
+                margin-top:30px
+            }
+
+            input[type=submit]{
+                margin-top: 20px;
+                padding: 5px 10px;
+                border-radius: 10px;
+                border:0px
+            }
+
+        </style>
+
     </head>
     <body>
         <form method="post" action="salvar_produtos.jsp">
-            
+
             <p>
                 <label for="codigo">Código:</label>
                 <input type="text" name="codigo" id="codigo">
             </p>
-            
+
             <p>
                 <label for="nome">Nome do produto:</label>
                 <input type="text" name="nome" id="nome" size="50" maxlength="50">
             </p>
-            
+
             <p>
                 <label for="marca">Marca:</label>
                 <input type="text" name="marca" id="marca" size="50" maxlength="50">
             </p>
-            
+
             <p>
                 <label for="preco">Preço:</label>
                 <input type="text" name="preco" id="preco">
             </p>
-            
+
             <p>
                 <input type="submit" value="Salvar">
             </p>

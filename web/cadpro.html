@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <title>Cadastro de podutos</title>
-        <meta charset="UTF-8">
+        <meta charset="ISO-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
 
@@ -13,14 +13,15 @@
             form {
                 width: 40%;
                 line-height: 2;
-                margin-top:30px
+                margin-top:70px
             }
 
             input[type=submit]{
+                border: solid 2px;
                 margin-top: 20px;
                 padding: 5px 10px;
+                background-color: white;
                 border-radius: 10px;
-                border:0px
             }
 
         </style>
@@ -30,8 +31,8 @@
         <form method="post" action="salvar_produtos.jsp">
 
             <p>
-                <label for="codigo">CÃ³digo:</label>
-                <input type="text" name="codigo" id="codigo">
+                <label for="codigo">Código:</label>
+                <input type="number" step="1" name="codigo" id="codigo">
             </p>
 
             <p>
@@ -45,8 +46,8 @@
             </p>
 
             <p>
-                <label for="preco">PreÃ§o:</label>
-                <input type="text" name="preco" id="preco">
+                <label for="preco">Preço:</label>
+                <input type="number" step="0.5" name="preco" id="preco">
             </p>
 
             <p>

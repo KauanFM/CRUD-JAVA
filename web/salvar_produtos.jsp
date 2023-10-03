@@ -13,6 +13,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            * {
+                margin: 0 auto;
+            }
+            
+             body {
+                text-align: center;
+                margin-top: 70px
+            }
+        </style>
     </head>
     <body>
         <%
@@ -43,7 +53,12 @@
                 st.execute(); // Executa o comando sql INSERT
                 out.print("Produto cadastrado com sucesso");
             } catch (Exception x) {
-                out.print("Erro: " + x.getMessage());
+                String erro = x.getMessage();
+                if(erro.contains("Duplicate entry")){
+                    out.print("Esse código já está cadastrado.");
+                } else {
+                    out.print("Erro: " + erro);
+                }
             }
 
 

@@ -17,11 +17,12 @@
             }
 
             input[type=submit]{
-                border: solid 2px;
-                margin-top: 20px;
+                color: black;
+                margin-top: 35px;
                 padding: 5px 10px;
-                background-color: white;
+                background-color: #66ff33;
                 border-radius: 10px;
+                border: solid 2px;
             }
 
         </style>
@@ -32,22 +33,22 @@
 
             <p>
                 <label for="codigo">Código:</label>
-                <input type="number" step="1" name="codigo" id="codigo">
+                <input type="number" step="1" name="codigo" id="codigo" required>
             </p>
 
             <p>
                 <label for="nome">Nome do produto:</label>
-                <input type="text" name="nome" id="nome" size="50" maxlength="50">
+                <input type="text" name="nome" id="nome" size="50" maxlength="50" required>
             </p>
 
             <p>
                 <label for="marca">Marca:</label>
-                <input type="text" name="marca" id="marca" size="50" maxlength="50">
+                <input type="text" name="marca" id="marca" size="50" maxlength="50" required>
             </p>
 
             <p>
                 <label for="preco">Preço:</label>
-                <input type="number" step="0.5" name="preco" id="preco">
+                <input type="number" step="0.5" name="preco" id="preco" required>
             </p>
 
             <p>

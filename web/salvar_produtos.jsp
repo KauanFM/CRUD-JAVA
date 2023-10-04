@@ -28,16 +28,13 @@
         <%
 
             // Recebendo os parâmetros do cadastro de produtos //
-            int codigo;
-            String nome, marca;
-            double preco;
-
-            codigo = Integer.parseInt(request.getParameter("codigo"));
-            nome = request.getParameter("nome");
-            marca = request.getParameter("marca");
-            preco = Double.parseDouble(request.getParameter("preco"));
+            int codigo = Integer.parseInt(request.getParameter("codigo"));
+            String nome = request.getParameter("nome");
+            String marca = request.getParameter("marca");
+            double preco = Double.parseDouble(request.getParameter("preco"));
 
             try { // Tratando Exceções 
+            
                 //Fazer a conexão com o Banco de Dados //
                 Connection conecta;
                 PreparedStatement st;
@@ -52,6 +49,7 @@
                 st.setDouble(4, preco);
                 st.execute(); // Executa o comando sql INSERT
                 out.print("Produto cadastrado com sucesso");
+                
             } catch (Exception x) {
                 String erro = x.getMessage();
                 if(erro.contains("Duplicate entry")){

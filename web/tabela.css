@@ -27,6 +27,15 @@ td a {
     color: black;
     border: solid 2px;
     padding: 5px 10px;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+
+#ex{
+    text-decoration: none;
+    color: black;
+    border: solid 2px;
+    padding: 5px 10px;
     background-color: red;
     border-radius: 10px;
 }

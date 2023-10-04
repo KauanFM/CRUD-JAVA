@@ -1,8 +1,3 @@
-<%-- 
-    Document   : listapro
-    Created on : 2 de out. de 2023, 19:16:46
-    Author     : Mendes
---%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.DriverManager"%>
@@ -31,7 +26,7 @@
     %>
     <table border="1">
         <tr>
-            <th>Código</th><th>Nome</th><th>Marca</th><th>Preço</th><th>Exclusão</th>
+            <th>Código</th><th>Nome</th><th>Marca</th><th>Preço</th><th>Exclusão</th><th>Alteração</th>
         </tr>                
         <%
             while (rs.next()) {
@@ -41,7 +36,8 @@
             <td><%= rs.getString("nome")%></td>
             <td><%= rs.getString("marca")%></td>
             <td><%= rs.getString("preco")%></td>
-            <td><a href="excpro.jsp?codigo=<%= rs.getString("codigo")%>">Excluir</a></td>
+            <td><a href="excpro.jsp?codigo=<%= rs.getString("codigo")%>" id="ex" >Excluir</a></td>
+            <td><a href="carregaprod.jsp?codigo=<%= rs.getString("codigo")%>">Alterar</a></td>
         </tr>
         <%
             }

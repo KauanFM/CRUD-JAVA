@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
+
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Alteração de produto</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0 auto;
+            }
+            
+            form {
+                width: 25%;
+                line-height: 2;
+                margin-top:70px
+            }
+            
+            input[type=submit]{
+                color: black;
+                border: solid 2px;
+                margin-top: 35px;
+                margin-left: 120px;
+                padding: 5px 10px;
+                background-color: #66ff33;
+                border-radius: 10px;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <form method="get" action="carregaprod.jsp"> 
+            <label for="cod">Código do produto: </label>
+            <input type="number" name="codigo" id="cod" required>
+            <input type="submit" value="Buscar">
+        </form>
     </body>
 </html>

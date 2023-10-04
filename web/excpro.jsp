@@ -34,6 +34,8 @@
                 PreparedStatement st = conecta.prepareStatement("DELETE FROM produto WHERE codigo=?");
                 st.setInt(1, cod);
                 int resultado = st.executeUpdate();
+                
+                //Verifica se foi excluido ou não
                 if(resultado == 0) {
                 out.print("Esse produto não está cadastrado");
                 } else {
